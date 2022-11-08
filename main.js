@@ -59,18 +59,27 @@ const posts = [
 const container = document.getElementById(`container`);
 
 for (i = 0; i < posts.length; i++){
-    for (let key in posts[i]){
-        console.log(key, posts[i][key]);
-        if (key === `author`){
-            const postHeaderBox = document.createElement(`div`);
-            let author = posts[i][key];
-            postHeaderBox.append(author);
-            container.appendChild(postHeaderBox);
-        }   
-        
-        }
+        console.log(posts[i]);
         
     }
+
+
+
+    // for (let key in posts[i]){
+    //     console.log(key, posts[i][key]);
+    //     if (key === `author`){
+    //         for (let key in author){
+                
+    //         }
+    //         // const postHeaderBox = document.createElement(`div`);
+    //         // let author = posts[i][key];
+    //         // postHeaderBox.append(author);
+    //         // container.appendChild(postHeaderBox);
+    //     }   
+        
+    //     }
+
+
 
 
 
