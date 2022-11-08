@@ -56,3 +56,27 @@ const posts = [
     }
 ];
 
+const container = document.getElementById(`container`);
+
+for (i = 0; i < posts.length; i++){
+    for (let key in posts[i]){
+        console.log(key, posts[i][key]);
+        if (key === `author`){
+            const postHeaderBox = document.createElement(`div`);
+            let author = posts[i][key];
+            postHeaderBox.append(author);
+            container.appendChild(postHeaderBox);
+        }   
+        
+        }
+        
+    }
+
+
+
+
+// if (key === `author`){
+        //     let authorData = key;
+        //     for (let key in authorData){
+        //         console.log(authorData[key]);
+        //     } 
