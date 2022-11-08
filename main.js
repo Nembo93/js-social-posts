@@ -148,14 +148,28 @@ for (i = 0; i < posts.length; i++){
         myLikeButton.innerHTML = `Mi piace`;
         myLikeButton.classList.add(`like-button`, `js-like-button`)
         likeCta.appendChild(myLikeButton);
+        let cliked = false;
+        myLikeButton.addEventListener(`click`, function(){
+            if (cliked === false){
+                myLikeButton.classList.add(`like-button--liked`);
+                cliked = true;
+            } else{
+                myLikeButton.classList.remove(`like-button--liked`);
+                cliked = false;
+            }
+            
+        }
+        )
 
         // 2°div
         const likeCounter = document.createElement(`div`);
         likeCounter.innerHTML = `Piace a ` + (posts[i].likes) + ` persone`;
         likeBox.appendChild(likeCounter);
 
-
         }
+
+        
+        
 
         
         
