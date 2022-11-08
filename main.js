@@ -68,11 +68,44 @@ for (i = 0; i < posts.length; i++){
         // console.log(posts[i].likes);
         // console.log(posts[i].created);
 
+        // Creare un div per ogni post
         const postBox = document.createElement(`div`);
         postBox.classList.add(`post`);
         container.appendChild(postBox);
-        }
 
+        // Creare un header per ogni post
+        const headerBox = document.createElement(`div`);
+        headerBox.classList.add(`post__header`);
+        postBox.appendChild(headerBox);
+
+        // Creare un div all'interno dell'header
+        const headerBoxMeta = document.createElement(`div`);
+        headerBoxMeta.classList.add(`post-meta`);
+        headerBox.appendChild(headerBoxMeta);
+
+        // Due div all'interno dell'header
+        // Creare un div all'interno di headerBoxMeta
+        const postMetaIcon = document.createElement(`div`);
+        postMetaIcon.classList.add(`post-meta__icon`);
+        headerBoxMeta.appendChild(postMetaIcon);
+
+        // Creare un div all'interno dell'header (stesso livello di headerBoxMeta)
+        const postMetaData = document.createElement(`div`);
+        postMetaData.classList.add(`post-meta__data`);
+        headerBoxMeta.appendChild(postMetaData);
+
+        // Due div all'interno di postMetaData
+        // Creare un div all'interno di postMetaData
+        const postMetaAuthor = document.createElement(`div`);
+        postMetaAuthor.classList.add(`post-meta__author`);
+        postMetaData.appendChild(postMetaAuthor);
+
+        // Creare un altro div all'interno di postMetaData
+        const postMetaTime = document.createElement(`div`);
+        postMetaTime.classList.add(`post-meta__time`);
+        postMetaData.appendChild(postMetaTime);
+        }
+        
         
 
 
