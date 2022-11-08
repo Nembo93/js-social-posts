@@ -122,6 +122,12 @@ for (i = 0; i < posts.length; i++){
         postText.innerHTML = posts[i].content;
         postBox.appendChild(postText);
         
+        // IMMAGINE DEL POST
+        // Creare un div all'interno di postBox
+        const postImg = document.createElement(`img`);
+        postImg.classList.add(`post__image`);
+        postImg.src = posts[i].media;
+        postBox.appendChild(postImg);
         }
         
         
