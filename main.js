@@ -128,7 +128,36 @@ for (i = 0; i < posts.length; i++){
         postImg.classList.add(`post__image`);
         postImg.src = posts[i].media;
         postBox.appendChild(postImg);
+
+        // FOOTER DEL POST
+        // Creare un div per il footer
+        const footerPost = document.createElement(`div`);
+        postBox.appendChild(footerPost);
+
+        // Creare un div all'interno del footer
+        const likeBox = document.createElement(`div`);
+        likeBox.classList.add(`likes`);
+        footerPost.appendChild(likeBox);
+        
+        // Creare due div all'interno di likeBox
+        // 1°div
+        const likeCta = document.createElement(`div`);
+        likeBox.appendChild(likeCta);
+        // Creare link all'interno di likeCta
+        const myLikeButton = document.createElement(`a`);
+        myLikeButton.innerHTML = `Mi piace`;
+        myLikeButton.classList.add(`like-button`, `js-like-button`)
+        likeCta.appendChild(myLikeButton);
+
+        // 2°div
+        const likeCounter = document.createElement(`div`);
+        likeCounter.innerHTML = `Piace a ` + (posts[i].likes) + ` persone`;
+        likeBox.appendChild(likeCounter);
+
+
         }
+
+        
         
         
 
