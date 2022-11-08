@@ -58,10 +58,55 @@ const posts = [
 
 const container = document.getElementById(`container`);
 
+
 for (i = 0; i < posts.length; i++){
-        console.log(posts[i]);
+        // console.log(posts[i]);
+        // console.log(posts[i].id);
+        // console.log(posts[i].content);
+        // console.log(posts[i].author.name);
+        // console.log(posts[i].author.image);
+        // console.log(posts[i].likes);
+        // console.log(posts[i].created);
+
+        const postBox = document.createElement(`div`);
+        postBox.classList.add(`post`);
+        container.appendChild(postBox);
+        }
+
         
-    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        // for (let key in posts[i]){
+            
+        // }
+    
 
 
 
